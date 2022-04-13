@@ -5,8 +5,13 @@ function positions (firstPlace, secondPlace, lastPlace) {
     if (vencedores[2] == 'Daniel'){
         vencedores.splice(1,1)
         vencedores.push('Manoel')} 
-        else {
-        return vencedores}
+        else if (vencedores[1] == 'Daniel'){
+            vencedores.splice(1,1)
+            vencedores.unshift('Daniel')
+        }
+        else{
+            return vencedores
+        }
         {
     console.log('1 - Colocado: ' + vencedores[0]);
     console.log('2 - Colocado:' + vencedores[1]);
@@ -16,4 +21,5 @@ function positions (firstPlace, secondPlace, lastPlace) {
 
 }
 
-positions('Rafael', 'Manoel', 'Daniel')
+positions('Rafael', 'Manoel','Daniel')
+
